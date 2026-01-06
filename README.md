@@ -8,8 +8,8 @@ Delivery Time Estimation using Vehicle Scheduling
 
 The solution is implemented using PHP 8.4, Symfony Console, and PHPUnit 12, following clean architecture and SOLID principles.
 
-📌 Problem 1: Delivery Cost Estimation with Offers
-Description
+📌 **Problem 1:** Delivery Cost Estimation with Offers
+**Description**
 
 Calculate the total delivery cost for each package using the formula:
 
@@ -20,7 +20,7 @@ Delivery Cost = Base Delivery Cost
 
 If a valid offer code is applied and its criteria are met, a discount is applied.
 
-Key Rules
+**Key Rules**
 
 Only one offer code per package
 
@@ -59,10 +59,10 @@ PKG2 0 275
 PKG3 35 665
 
 
-Run Problem 1
+**Run Problem 1**
 php bin/console app:calculate-cost < input_cost.txt
 
-📌 Problem 2: Delivery Time Estimation
+📌 **Problem 2: ** Delivery Time Estimation
 Description
 
 Estimate delivery time for each package using a fleet of vehicles while maximizing delivery efficiency.
@@ -88,9 +88,13 @@ Delivery time for a package:
 delivery_time = vehicle_start_time + (distance / speed)
 
 Input Format (input_delivery.txt)
+
 base_delivery_cost no_of_packages
+
 pkg_id weight distance offer_code
+
 ...
+
 no_of_vehicles max_speed max_carriable_weight
 
 Example
@@ -126,7 +130,7 @@ PKG4 105 1395 0.85
 PKG5 0 2125 4.19
 
 
-Run Problem 2
+**Run Problem 2**
 php bin/console app:calculate-courier < input_delivery.txt
 
 🧠 Architecture & Design Decisions
