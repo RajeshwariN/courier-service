@@ -29,23 +29,35 @@ If offer code is invalid or criteria not met → discount = 0
 Offers are extensible via the Strategy pattern
 
 Input Format (input_cost.txt)
+
 base_delivery_cost no_of_packages
+
 pkg_id weight distance offer_code
+
 ...
 
 Example
+
 100 3
+
 PKG1 5 5 OFR001
+
 PKG2 15 5 OFR002
+
 PKG3 10 100 OFR003
+
 
 Output Format
 pkg_id discount total_cost
 
 Example Output
+
 PKG1 0 175
+
 PKG2 0 275
+
 PKG3 35 665
+
 
 Run Problem 1
 php bin/console app:calculate-cost < input_cost.txt
@@ -82,23 +94,37 @@ pkg_id weight distance offer_code
 no_of_vehicles max_speed max_carriable_weight
 
 Example
+
 100 5
+
 PKG1 50 30 OFR001
+
 PKG2 75 125 NA
+
 PKG3 175 100 OFR003
+
 PKG4 110 60 OFR002
+
 PKG5 155 95 NA
+
 2 70 200
+
 
 Output Format
 pkg_id discount total_cost estimated_delivery_time
 
 Example Output
+
 PKG1 0 750 3.98
+
 PKG2 0 1475 1.78
+
 PKG3 0 2350 1.42
+
 PKG4 105 1395 0.85
+
 PKG5 0 2125 4.19
+
 
 Run Problem 2
 php bin/console app:calculate-courier < input_delivery.txt
@@ -163,4 +189,5 @@ The solution strictly follows the rules provided in the challenge PDF.
 👩‍💻 Author
 
 Rajeshwari Nesargi
+
 Senior PHP / Backend Engineer
