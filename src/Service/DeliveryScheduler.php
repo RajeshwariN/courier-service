@@ -25,7 +25,7 @@ class DeliveryScheduler
             $vehicleIndex = array_key_first($vehicleTimes);
             $startTime = $vehicleTimes[$vehicleIndex];
 
-            // 1️⃣ Find BEST shipment
+            // 1️ Find BEST shipment
             $bestShipment = [];
             $bestCount = 0;
             $bestWeight = 0;
@@ -64,17 +64,17 @@ class DeliveryScheduler
                 }
             }
 
-            // 2️⃣ Assign delivery times
+            // 2️ Assign delivery times
             foreach ($bestShipment as $pkg) {
                 $pkg->deliveryTime = 
                     $startTime + ($pkg->distance / $speed);
             }
 
-            // 3️⃣ Vehicle returns
+            // 3️ Vehicle returns
             $vehicleTimes[$vehicleIndex] =
                 $startTime + (2 * $bestDistance) / $speed;
 
-            // 4️⃣ Remove delivered packages
+            // 4️ Remove delivered packages
             foreach ($bestShipment as $delivered) {
                 $remaining = array_values(
                     array_filter(
@@ -86,4 +86,3 @@ class DeliveryScheduler
         }
     }
 }
-
